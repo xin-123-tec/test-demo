@@ -26,7 +26,7 @@ git init
 git add .
 git commit -m "feat: create personal GitHub blog homepage"
 git branch -M main
-git remote add origin https://github.com/H3a21/H3a21.github.io.git
+git remote add origin https://github.com/xin-123-tec/test-demo.git
 git push -u origin main
 ```
 
@@ -35,7 +35,7 @@ git push -u origin main
 1. 进入仓库 `Settings` -> `Pages`
 2. `Build and deployment` 选择 `Deploy from a branch`
 3. `Branch` 选择 `main / (root)` 并保存
-4. 等待 1-3 分钟后访问：`https://h3a21.github.io/`
+4. 等待 1-3 分钟后访问：`https://xin-123-tec.github.io/test-demo/`
 
 ## 后续更新
 
