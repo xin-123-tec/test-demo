@@ -3,93 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>我的 GitHub 博客</title>
-    <meta
-      name="description"
-      content="个人 GitHub 博客主页，包含项目介绍与访问链接。"
-    />
+    <title>坦克大战</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header class="top-nav">
-      <a class="brand" href="https://github.com/xin-123-tec" target="_blank" rel="noreferrer"
-        >xin-123-tec</a
-      >
-      <nav>
-        <a href="#about">关于我</a>
-        <a href="#projects">项目</a>
-        <a href="#contact">联系</a>
-      </nav>
-    </header>
-
-    <main class="page">
-      <aside class="profile-card" id="about">
-        <img
-          class="avatar"
-          src="https://avatars.githubusercontent.com/u/9919?v=4"
-          alt="GitHub Avatar"
-        />
-        <h1>我的个人主页</h1>
-        <p class="id">GitHub: @xin-123-tec</p>
-        <p class="tagline">持续学习，持续输出。</p>
-        <p class="meta">欢迎访问我的项目与更新。</p>
-        <div class="action-row">
-          <a class="btn btn-primary" href="https://github.com/xin-123-tec" target="_blank" rel="noreferrer"
-            >访问 GitHub</a
-          >
-          <a class="btn" href="mailto:18246136526@163.com">发送邮件</a>
+    <div class="game-shell">
+      <header class="hud">
+        <h1>坦克大战</h1>
+        <div class="stats">
+          <span>生命: <b id="hp">3</b></span>
+          <span>击毁: <b id="score">0</b></span>
+          <span>敌军: <b id="enemiesLeft">0</b></span>
         </div>
-      </aside>
+        <p class="tips">WASD 移动，J 发射炮弹，R 重新开始</p>
+      </header>
 
-      <section class="content-area">
-        <section class="hero">
-          <h2>欢迎来到我的 GitHub 博客</h2>
-          <p>
-            这里是我的个人主页，展示学习记录、项目作品和持续更新的开发日志。页面风格参考
-            GitHub 个人资料布局并做了简化设计。
-          </p>
-        </section>
+      <main class="canvas-wrap">
+        <canvas id="gameCanvas" width="900" height="600"></canvas>
+        <div id="overlay" class="overlay hidden">
+          <h2 id="overlayTitle"></h2>
+          <p id="overlayText"></p>
+          <button id="restartBtn">再来一局</button>
+        </div>
+      </main>
+    </div>
 
-        <section class="projects" id="projects">
-          <div class="section-head">
-            <h3>项目栏目</h3>
-            <span>精选项目 · 访问链接</span>
-          </div>
-
-          <div class="project-grid">
-            <article class="project-card">
-              <h4>Tank Battle Web Game</h4>
-              <p>浏览器坦克大战小游戏，支持键盘操控和对战逻辑。</p>
-              <a href="https://github.com/xin-123-tec/test-demo" target="_blank" rel="noreferrer"
-                >仓库地址</a
-              >
-            </article>
-
-            <article class="project-card">
-              <h4>Tank Battle Online</h4>
-              <p>本项目的 GitHub Pages 在线访问地址。</p>
-              <a href="https://xin-123-tec.github.io/test-demo/" target="_blank" rel="noreferrer"
-                >在线试玩</a
-              >
-            </article>
-
-            <article class="project-card">
-              <h4>更多项目</h4>
-              <p>查看我在 GitHub 上持续更新的其他项目。</p>
-              <a href="https://github.com/xin-123-tec?tab=repositories" target="_blank" rel="noreferrer"
-                >查看全部仓库</a
-              >
-            </article>
-          </div>
-        </section>
-
-        <section class="contact" id="contact">
-          <h3>联系与更新</h3>
-          <p>
-            你可以通过 GitHub Follow 我，或在项目仓库中提交 issue / discussion 与我交流。
-          </p>
-        </section>
-      </section>
-    </main>
+    <script src="./game.js"></script>
   </body>
 </html>

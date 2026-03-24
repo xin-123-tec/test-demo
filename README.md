@@ -1,48 +1,49 @@
-# GitHub Blog Homepage
+# Tank Battle Web Game（浏览器坦克大战）
 
-这是一个可直接部署到 GitHub Pages 的个人博客主页模板，包含：
+一个可直接在浏览器运行的坦克大战小游戏：支持移动、射击、敌方 AI、碰撞检测与胜负结算。
 
-- 个人简介卡片
-- 独立“项目栏目”
-- 每个项目的访问链接
-- 响应式布局（支持手机和电脑）
+## 在线访问（GitHub Pages）
 
-## 本地预览
+`https://xin-123-tec.github.io/test-demo/`
 
-双击 `index.html` 可以直接打开，或使用本地服务：
+> 首次部署通常需要 1-3 分钟，请稍后刷新页面。
+
+## 玩法与按键
+
+- **W / A / S / D**：移动
+- **J**：发射炮弹
+- **R**：重新开始
+
+目标：击毁敌军坦克，避免被击中耗尽生命。
+
+## 已实现功能（补全）
+
+- **基础战斗**：移动 / 射击 / 子弹飞行与销毁
+- **生命系统**：玩家生命值、受击判定
+- **敌方 AI**：随机巡逻、随机开火
+- **碰撞与阻挡**：墙体阻挡、子弹碰撞（墙体 / 坦克）
+- **对局流程**：胜利/失败结算、重开按钮与提示遮罩
+- **HUD 面板**：生命、击毁数、剩余敌军实时显示
+
+## 本地运行
+
+### 方式 1：直接打开
+
+双击 `index.html` 即可运行。
+
+### 方式 2：本地服务（推荐）
+
+在项目目录执行：
 
 ```bash
 python -m http.server 5500
 ```
 
-浏览器访问：`http://localhost:5500`
+然后打开：`http://localhost:5500`
 
-## 同步到 GitHub（首次）
+## 项目结构
 
-在 `d:/cursor_workspace` 目录执行：
-
-```bash
-git init
-git add .
-git commit -m "feat: create personal GitHub blog homepage"
-git branch -M main
-git remote add origin https://github.com/xin-123-tec/test-demo.git
-git push -u origin main
-```
-
-## 启用 GitHub Pages
-
-1. 进入仓库 `Settings` -> `Pages`
-2. `Build and deployment` 选择 `Deploy from a branch`
-3. `Branch` 选择 `main / (root)` 并保存
-4. 等待 1-3 分钟后访问：`https://xin-123-tec.github.io/test-demo/`
-
-## 后续更新
-
-每次修改后执行：
-
-```bash
-git add .
-git commit -m "update blog content"
-git push
-```
+- `index.html`：页面骨架和 HUD
+- `style.css`：界面样式
+- `game.js`：游戏循环、碰撞检测、敌方 AI
+- `.github/workflows/deploy-pages.yml`：Pages 自动部署
