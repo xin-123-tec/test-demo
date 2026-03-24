@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>坦克大战</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="hud">
+        <h1>坦克大战</h1>
+        <div class="stats">
+          <span>生命: <b id="hp">3</b></span>
+          <span>击毁: <b id="score">0</b></span>
+          <span>敌军: <b id="enemiesLeft">0</b></span>
+        </div>
+        <p class="tips">WASD 移动，J 发射炮弹，R 重新开始</p>
+      </header>
+
+      <main class="canvas-wrap">
+        <canvas id="gameCanvas" width="900" height="600"></canvas>
+        <div id="overlay" class="overlay hidden">
+          <h2 id="overlayTitle"></h2>
+          <p id="overlayText"></p>
+          <button id="restartBtn">再来一局</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="./game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+:root {
+  --bg: #111827;
+  --panel: #1f2937;
+  --text: #e5e7eb;
+  --accent: #22c55e;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  background: radial-gradient(circle at top, #1e293b, #0f172a 60%);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+}
+
+.game-shell {
+  width: min(96vw, 980px);
+}
+
+.hud {
+  background: rgba(31, 41, 55, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+}
+
+.hud h1 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.stats {
+  display: flex;
+  gap: 18px;
+  font-size: 15px;
+}
+
+.tips {
+  margin: 8px 0 0;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.canvas-wrap {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #334155;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.76);
+  display: grid;
+  place-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.overlay h2 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.overlay p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.overlay button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: white;
+  background: var(--accent);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.overlay button:hover {
+  filter: brightness(1.05);
+}
+
+.hidden {
+  display: none;
+}
