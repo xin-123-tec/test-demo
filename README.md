@@ -1,53 +1,48 @@
-# Tank Battle Web Game
+# GitHub Blog Homepage
 
-一个可直接在浏览器运行的经典坦克大战小游戏。
+这是一个可直接部署到 GitHub Pages 的个人博客主页模板，包含：
 
-## 在线访问
+- 个人简介卡片
+- 独立“项目栏目”
+- 每个项目的访问链接
+- 响应式布局（支持手机和电脑）
 
-启用 GitHub Pages 后，游戏会发布到：
+## 本地预览
 
-`https://xin-123-tec.github.io/test-demo/`
-
-> 首次部署通常需要 1-3 分钟，请稍后刷新页面。
-
-## 本地运行
-
-### 方式 1：直接打开
-
-双击 `index.html` 即可运行。
-
-### 方式 2：本地服务（推荐）
-
-在项目目录执行：
+双击 `index.html` 可以直接打开，或使用本地服务：
 
 ```bash
 python -m http.server 5500
 ```
 
-然后打开：
+浏览器访问：`http://localhost:5500`
 
-`http://localhost:5500`
+## 同步到 GitHub（首次）
 
-## 操作说明
+在 `d:/cursor_workspace` 目录执行：
 
-- `W` `A` `S` `D`：移动
-- `J`：发射炮弹
-- `R`：重新开始
+```bash
+git init
+git add .
+git commit -m "feat: create personal GitHub blog homepage"
+git branch -M main
+git remote add origin https://github.com/H3a21/H3a21.github.io.git
+git push -u origin main
+```
 
-## 项目结构
+## 启用 GitHub Pages
 
-- `index.html`：页面骨架和 HUD
-- `style.css`：界面样式
-- `game.js`：游戏循环、碰撞检测、敌方 AI
+1. 进入仓库 `Settings` -> `Pages`
+2. `Build and deployment` 选择 `Deploy from a branch`
+3. `Branch` 选择 `main / (root)` 并保存
+4. 等待 1-3 分钟后访问：`https://h3a21.github.io/`
 
-## 已实现功能
+## 后续更新
 
-- 玩家坦克移动、射击、生命系统
-- 敌方坦克随机巡逻与开火
-- 墙体阻挡与子弹碰撞
-- 胜利/失败结算与重开
-- 实时 HUD（生命、击毁、剩余敌军）
+每次修改后执行：
 
-## 部署说明（GitHub Pages）
-
-仓库包含 `.github/workflows/deploy-pages.yml`，推送到 `main` 后会自动部署静态页面。
+```bash
+git add .
+git commit -m "update blog content"
+git push
+```

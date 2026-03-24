@@ -3,31 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>坦克大战</title>
+    <title>Hu Jiarui | GitHub Blog</title>
+    <meta
+      name="description"
+      content="Hu Jiarui 的个人 GitHub 博客主页，包含项目介绍与访问链接。"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="game-shell">
-      <header class="hud">
-        <h1>坦克大战</h1>
-        <div class="stats">
-          <span>生命: <b id="hp">3</b></span>
-          <span>击毁: <b id="score">0</b></span>
-          <span>敌军: <b id="enemiesLeft">0</b></span>
-        </div>
-        <p class="tips">WASD 移动，J 发射炮弹，R 重新开始</p>
-      </header>
+    <header class="top-nav">
+      <a class="brand" href="https://github.com/H3a21" target="_blank" rel="noreferrer"
+        >H3a21</a
+      >
+      <nav>
+        <a href="#about">关于我</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
 
-      <main class="canvas-wrap">
-        <canvas id="gameCanvas" width="900" height="600"></canvas>
-        <div id="overlay" class="overlay hidden">
-          <h2 id="overlayTitle"></h2>
-          <p id="overlayText"></p>
-          <button id="restartBtn">再来一局</button>
+    <main class="page">
+      <aside class="profile-card" id="about">
+        <img
+          class="avatar"
+          src="https://avatars.githubusercontent.com/u/180220370?v=4"
+          alt="Hu Jiarui Avatar"
+        />
+        <h1>Hu Jiarui</h1>
+        <p class="id">GitHub: @H3a21</p>
+        <p class="tagline">Now is better than never.</p>
+        <p class="meta">Dalian Maritime University · Harbin, China</p>
+        <div class="action-row">
+          <a class="btn btn-primary" href="https://github.com/H3a21" target="_blank" rel="noreferrer"
+            >访问 GitHub</a
+          >
+          <a class="btn" href="mailto:hello@example.com">发送邮件</a>
         </div>
-      </main>
-    </div>
+      </aside>
 
-    <script src="./game.js"></script>
+      <section class="content-area">
+        <section class="hero">
+          <h2>欢迎来到我的 GitHub 博客</h2>
+          <p>
+            这里是我的个人主页，展示学习记录、项目作品和持续更新的开发日志。页面风格参考
+            GitHub 个人资料布局并做了简化设计。
+          </p>
+        </section>
+
+        <section class="projects" id="projects">
+          <div class="section-head">
+            <h3>项目栏目</h3>
+            <span>精选项目 · 访问链接</span>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <h4>MyCollegeYears</h4>
+              <p>大学阶段学习与实践的代码与记录集合。</p>
+              <a href="https://github.com/H3a21/MyCollegeYears" target="_blank" rel="noreferrer"
+                >访问项目</a
+              >
+            </article>
+
+            <article class="project-card">
+              <h4>SCL-90_Ver1.01</h4>
+              <p>心理量表相关系统的早期版本项目（JavaScript）。</p>
+              <a href="https://github.com/H3a21/SCL-90_Ver1.01" target="_blank" rel="noreferrer"
+                >访问项目</a
+              >
+            </article>
+
+            <article class="project-card">
+              <h4>SCL-90_Ver1.51</h4>
+              <p>在原有基础上继续迭代的版本，聚焦功能完善与体验优化。</p>
+              <a href="https://github.com/H3a21/SCL-90_Ver1.51" target="_blank" rel="noreferrer"
+                >访问项目</a
+              >
+            </article>
+
+            <article class="project-card">
+              <h4>SCL-90_Ver0.0</h4>
+              <p>实验性起步版本，用于验证流程和核心页面结构。</p>
+              <a href="https://github.com/H3a21/SCL-90_Ver0.0" target="_blank" rel="noreferrer"
+                >访问项目</a
+              >
+            </article>
+
+            <article class="project-card">
+              <h4>H3a21.github.io</h4>
+              <p>个人站点与静态内容托管仓库。</p>
+              <a href="https://github.com/H3a21/H3a21.github.io" target="_blank" rel="noreferrer"
+                >访问项目</a
+              >
+            </article>
+
+            <article class="project-card">
+              <h4>Tank Battle Web Game</h4>
+              <p>浏览器坦克大战小游戏，支持键盘操控和对战逻辑。</p>
+              <a href="https://xin-123-tec.github.io/test-demo/" target="_blank" rel="noreferrer"
+                >在线试玩</a
+              >
+            </article>
+          </div>
+        </section>
+
+        <section class="contact" id="contact">
+          <h3>联系与更新</h3>
+          <p>
+            你可以通过 GitHub Follow 我，或在项目仓库中提交 issue / discussion 与我交流。
+          </p>
+        </section>
+      </section>
+    </main>
   </body>
 </html>
